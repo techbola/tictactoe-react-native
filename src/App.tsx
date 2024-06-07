@@ -7,7 +7,15 @@
 
 import React, {useState} from 'react';
 
-import {SafeAreaView, StatusBar, StyleSheet, Text, View} from 'react-native';
+import {
+  FlatList,
+  Pressable,
+  SafeAreaView,
+  StatusBar,
+  StyleSheet,
+  Text,
+  View,
+} from 'react-native';
 
 import Snackbar from 'react-native-snackbar';
 import Icons from './components/Icons';
@@ -104,9 +112,34 @@ function App(): React.JSX.Element {
   return (
     <SafeAreaView>
       <StatusBar />
-      <View>
-        <Text>Tic</Text>
-      </View>
+      {gameWinner ? (
+        <View style={[styles.playerInfo, styles.winnerInfo]}>
+          <Text style={styles.winnerTxt}>{gameWinner}</Text>
+        </View>
+      ) : (
+        <View
+          style={[
+            styles.playerInfo,
+            isCross ? styles.playerX : styles.playerO,
+          ]}>
+          <Text style={styles.gameTurnTxt}>
+            Player {isCross ? 'X' : 'O'}'s Turn
+          </Text>
+        </View>
+      )}
+      <FlatList
+        numColumns={3}
+        style={styles.grid}
+        data={gameState}
+        renderItem={({item, index}) => (
+          <Pressable
+            key={index}
+            style={styles.card}
+            onPress={() => onChangeItem(index)}>
+            <Icons name={item} />
+          </Pressable>
+        )}
+      />
     </SafeAreaView>
   );
 }
