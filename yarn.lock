@@ -1579,6 +1579,21 @@
 "@types/prop-types@*":
   "version" "15.7.12"
 
+"@types/react-native-vector-icons@^6.4.18":
+  "integrity" "sha512-YGlNWb+k5laTBHd7+uZowB9DpIK3SXUneZqAiKQaj1jnJCZM0x71GDim5JCTMi4IFkhc9m8H/Gm28T5BjyivUw=="
+  "resolved" "https://registry.npmjs.org/@types/react-native-vector-icons/-/react-native-vector-icons-6.4.18.tgz"
+  "version" "6.4.18"
+  dependencies:
+    "@types/react" "*"
+    "@types/react-native" "^0.70"
+
+"@types/react-native@^0.70":
+  "integrity" "sha512-c6WbyCgWTBgKKMESj/8b4w+zWcZSsCforson7UdXtXMecG3MxCinYi6ihhrHVPyUrVzORsvEzK8zg32z4pK6Sg=="
+  "resolved" "https://registry.npmjs.org/@types/react-native/-/react-native-0.70.19.tgz"
+  "version" "0.70.19"
+  dependencies:
+    "@types/react" "*"
+
 "@types/react-test-renderer@^18.0.0":
   "version" "18.3.0"
   dependencies:
@@ -4281,6 +4296,11 @@
 "react-is@^17.0.1":
   "version" "17.0.2"
 
+"react-native-snackbar@^2.6.2":
+  "integrity" "sha512-edAubZJiBowwQUXJV5oXbMqitQ9vw7JzWUCczeTPVo6lRa+FzsUjiCQBHdWBbCw/N8/Q7jgKg4juNXU/bXZdXg=="
+  "resolved" "https://registry.npmjs.org/react-native-snackbar/-/react-native-snackbar-2.6.2.tgz"
+  "version" "2.6.2"
+
 "react-native-vector-icons@^10.1.0":
   "integrity" "sha512-fdQjCHIdoXmRoTZ5gvN1FmT4sGLQ2wmQiNZHKJQUYnE2tkIwjGnxNch+6Nd4lHAACvMWO7LOzBNot2u/zlOmkw=="
   "resolved" "https://registry.npmjs.org/react-native-vector-icons/-/react-native-vector-icons-10.1.0.tgz"
@@ -4289,7 +4309,7 @@
     "prop-types" "^15.7.2"
     "yargs" "^16.1.1"
 
-"react-native@*", "react-native@0.74.2":
+"react-native@*", "react-native@>=0.60", "react-native@0.74.2":
   "version" "0.74.2"
   dependencies:
     "@jest/create-cache-key-function" "^29.6.3"
@@ -4346,7 +4366,7 @@
     "react-shallow-renderer" "^16.15.0"
     "scheduler" "^0.23.0"
 
-"react@*", "react@^16.0.0 || ^17.0.0 || ^18.0.0", "react@^18.2.0", "react@18.2.0":
+"react@*", "react@^16.0.0 || ^17.0.0 || ^18.0.0", "react@^18.2.0", "react@>=16", "react@18.2.0":
   "version" "18.2.0"
   dependencies:
     "loose-envify" "^1.1.0"
