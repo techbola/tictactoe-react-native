@@ -83,13 +83,22 @@ function App(): React.JSX.Element {
       return Snackbar.show({
         text: gameWinner,
         backgroundColor: 'green',
-        textColor: 'white',
+        textColor: '#FFFFFF',
       });
     }
 
     if (gameState[itemNumber] === 'empty') {
       gameState[itemNumber] = isCross ? 'cross' : 'circle';
+      setIsCross(prev => !prev);
+    } else {
+      return Snackbar.show({
+        text: 'Position is already filled',
+        backgroundColor: 'red',
+        textColor: '#FFFFFF',
+      });
     }
+
+    checkIsWinner();
   };
 
   return (
