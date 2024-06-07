@@ -140,6 +140,11 @@ function App(): React.JSX.Element {
           </Pressable>
         )}
       />
+      <Pressable style={styles.gameBtn} onPress={reloadGame}>
+        <Text style={styles.gameBtnText}>
+          {gameWinner ? 'Start new game' : 'Reload the game'}
+        </Text>
+      </Pressable>
     </SafeAreaView>
   );
 }
